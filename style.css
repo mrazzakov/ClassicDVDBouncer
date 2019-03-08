@@ -1,0 +1,9 @@
+#canvas {
+    height: 100vh;
+    background: #080808;
+}
+
+#logo {
+    width: 30%;
+    max-width: 250px;
+}
