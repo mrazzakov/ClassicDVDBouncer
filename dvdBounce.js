@@ -1,6 +1,6 @@
  
  
- function moveLogo() {
+function moveLogo() {
     var logo = document.getElementById('logo');    
 
     var width = window.innerWidth - logo.clientWidth;
@@ -44,8 +44,6 @@
         }
     }
 
-
-
     function changeColor() {
         let r = Math.floor(Math.random() * 255);
         let g = Math.floor(Math.random() * 255);
@@ -55,26 +53,5 @@
         let select = Math.floor(Math.random() * 3);
         select == 0 ? r=0 : select == 1 ? g=0 : b=0;
         logo.style.fill = 'rgb(' + r + ',' + g + "," + b + ')';
-
-
-        
     }
- }
-
-
-
-
-// function myMove() {
-//     var logo = document.getElementById("logo");
-//     var pos = 0;
-//     var id = setInterval(frame, 5);
-//     function frame() {
-//       if (pos >= (document.body.clientWidth - logo.width + PADDING_OFFSET)) {
-//         clearInterval(id);
-//       } else {
-//         pos++; 
-//         logo.style.top = pos + "px"; 
-//         logo.style.left = pos + "px"; 
-//       }
-//     }
-//   }
+}

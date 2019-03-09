@@ -6,6 +6,6 @@ body {
     position: fixed;
     width: 30%;
     max-width: 250px;
-    fill: red;
+    fill: green;
     left: 200px;
 }
