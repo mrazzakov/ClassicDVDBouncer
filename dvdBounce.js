@@ -3,25 +3,25 @@
 function moveLogo() {
     var logo = document.getElementById('logo');    
 
-    var width = window.innerWidth - logo.clientWidth;
-    var height = window.innerHeight - logo.clientHeight;
+    var width = window.screen.width;
+    var height = window.screen.height;
     var xPos = Math.floor(Math.random() * width);
     var yPos = Math.floor(Math.random() * height);
-    var xSpeed = Math.floor(Math.random() * 2) ? 1 : -1;
-    var ySpeed = Math.floor(Math.random() * 2) ? 1 : -1;
-    const BUFFER_WIDTH = 10;
-    const BUFFER_HEIGHT = 10;
+    var speed = 10;
+    var xSpeed = Math.floor(Math.random() * 2) ? speed : -speed;
+    var ySpeed = Math.floor(Math.random() * 2) ? speed : -speed;
 
     
-    setInterval(frame, 10);
+    setInterval(frame, 5);
     
     function frame() {
-        ratio = logo.clientWidth/250;
+        ratio = logo.clientWidth/50;
         xSpeed = Math.sign(xSpeed) * ratio;
         ySpeed = Math.sign(ySpeed) * ratio;
 
-        width = window.innerWidth - logo.clientWidth + BUFFER_WIDTH;
-        height = window.innerHeight - logo.clientHeight + BUFFER_HEIGHT;
+        width = window.screen.width;
+        height = window.innerHeight - logo.clientHeight;
+        console.log(width + " " + xPos)
         
         if(xPos > width || xPos < -5) {
             xSpeed = -xSpeed;
